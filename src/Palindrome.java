@@ -10,6 +10,7 @@ public class Palindrome{
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String test;
+		int n, i;
 		do {
 			System.out.print("Enter your phase here: ");
 			String inputString = scanner.nextLine(); //scan the input string
@@ -19,7 +20,7 @@ public class Palindrome{
 			
 			String newString = "";
 			//Remove space and punctuation in the input and convert it to lower case
-			for(int n=0; n < inputString.length(); n++) {
+			for( n=0; n < inputString.length(); n++) {
 				if(Character.isLetter(inputString.charAt(n))) {
 					newString += inputString.toLowerCase().charAt(n);
 				}
@@ -27,7 +28,7 @@ public class Palindrome{
 					
 			//Reverse the new input string (lower case, no space and punctuation)
 			String reverseString ="";
-			for(int i = newString.length() -1; i>=0; i-- ) {
+			for( i = newString.length() -1; i>=0; i-- ) {
 				reverseString = reverseString + newString.charAt(i);
 			}
 			System.out.println("The Reversed Phase of '" + newString + "' is '" + reverseString +"'");
